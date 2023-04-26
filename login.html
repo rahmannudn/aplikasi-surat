@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <title>Login Page</title>
+    <!-- Load Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/output.css" />
+
+    <!-- start fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end fonts -->
+  </head>
+  <body
+    class="bg-gray-200 flex flex-row items-center justify-center h-screen text-robotto"
+  >
+    <div class="bg-white rounded-lg shadow p-10 w-4/5 md:max-w-[50%]">
+      <h1 class="text-2xl font-bold mb-4 text-center">LOGIN</h1>
+      <form action="index.html">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="email">
+            Email
+          </label>
+          <input
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            type="email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-bold mb-2" for="password">
+            Password
+          </label>
+          <input
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="flex flex-col justify-between gap-y-4">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Sign In
+          </button>
+          <a
+            class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            href="#"
+          >
+            Forgot Password?
+          </a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <title>Halaman Bidang</title>
+    <!-- Load Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-200 text-robotto max-w-[100vw] overflow-x-hidden">
+    <header class="top-header w-full bg-blue-500 flex items-center gap-x-4">
+      <!-- start header logo -->
+      <div
+        class="logo-header hidden w-[24%] h-15 md:flex md:items-center px-3 py-1 gap-x-2"
+      >
+        <img
+          class="w-12"
+          alt=""
+          src="assets/img/LOGO_KOTA_BANJARMASIN_-_328_KB-removebg-preview.png"
+        />
+        <h3 class="text-base font-semibold text-white uppercase">
+          Aplikasi <br />
+          Pengelolaan Surat
+        </h3>
+      </div>
+      <!-- end header logo -->
+      <!-- start hamburger menu -->
+      <div
+        class="h-[74.56px] z-20 flex items-center justify-between w-full px-3 md:z-0"
+      >
+        <img
+          src="assets/icon/menu-icon.svg"
+          class="w-5 cursor-pointer hamburger-menu visible md:invisible"
+          alt=""
+        />
+
+        <button
+          class="btn-account text-white font-semibold flex items-center gap-x-[1px] relative z-50"
+        >
+          <span>Account</span
+          ><img
+            src="assets/icon/angle-small-down.svg"
+            class="w-4 inline-block"
+            alt=""
+          />
+
+          <ul
+            class="account-list hidden w-44 absolute top-7 -left-[6rem] bg-white rounded-md p-3 pb-6 text-left z-50 shadow-xl"
+          >
+            <li
+              class="p-2 border-b border-b-slate-400 text-slate-700 font-normal text-sm flex items-center justify-between hover:text-slate-900 hover:bg-slate-100 rounded-md"
+            >
+              Account Setting
+              <img src="assets/icon/settings-sliders.svg" class="w-4" alt="" />
+            </li>
+            <li
+              class="p-2 border-b border-b-slate-400 text-slate-700 font-normal text-sm flex items-center justify-between hover:text-slate-900 hover:bg-slate-100 rounded-md"
+            >
+              Logout
+              <img src="assets/icon/sign-out-alt.svg" class="w-4" alt="" />
+            </li>
+          </ul>
+        </button>
+      </div>
+
+      <!-- end hamburger menu -->
+    </header>
+    <div class="flex gap-x-4 w-full">
+      <aside
+        class="sidebar bg-white hidden max-w-[40%] z-20 fixed h-full md:static md:max-w-[30%] md:block md:h-screen md:z-0"
+      >
+        <!-- start navbar -->
+        <nav class="p-2">
+          <!-- start profile -->
+          <div class="flex items-center gap-x-3 py-5 px-3">
+            <img class="w-14" src="./assets/icon/picture.svg" alt="" />
+            <div>
+              <h3 class="name text-lg font-semibold break-all">Rahmanuddin</h3>
+              <h4 class="role text-base underline uppercase">Admin</h4>
+              <p class="email text-gray-700 max-w-xs break-all">
+                rahmann@gmail.com
+              </p>
+            </div>
+          </div>
+          <!-- end profile -->
+          <!-- start list menu -->
+          <ul class="px-3 flex flex-col gap-y-2">
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/home.svg" alt="" />
+              <a class="w-full h-full" href="index.html">Dashboard</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/envelope (1).svg" alt="" />
+              <a class="w-full h-full" href="surat_masuk.html">Surat Masuk</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/envelope-bulk.svg" alt="" />
+              <a class="w-full h-full" href="disposisi.html">Disposisi</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/envelope-open.svg" alt="" />
+              <a class="w-full h-full" href="surat_keluar.html">Surat Keluar</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/list.svg" alt="" />
+              <a class="w-full h-full" href="jenis_surat.html">Jenis Surat</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/users-alt.svg" alt="" />
+              <a class="w-full h-full" href="pegawai.html">Pegawai</a>
+            </li>
+            <li
+              class="p-2 w-full bg-slate-200 text-slate-900 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/elevator.svg" alt="" />
+              <a class="w-full h-full" href="bidang.html">Bidang</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img
+                class="w-4"
+                src="assets/icon/envelope-open-dollar.svg"
+                alt=""
+              />
+              <a class="w-full h-full" href="laporan_surat_masuk.html"
+                >Laporan Surat Masuk</a
+              >
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img
+                class="w-4"
+                src="assets/icon/envelope-open-text.svg"
+                alt=""
+              />
+              <a class="w-full h-full" href="laporan_surat_keluar.html"
+                >Laporan Surat Keluar</a
+              >
+            </li>
+          </ul>
+          <!-- end list menu -->
+        </nav>
+        <!-- end navbar -->
+      </aside>
+      <main class="p-4 px-2 w-full md:max-w-[78%]">
+        <!-- start section pengajuan surat keluar -->
+        <section class="pengajuan-surat-keluar mt-6">
+          <h2 class="text-xl font-semibold text-slate-950">Daftar Bidang</h2>
+
+          <div class="mt-4">
+            <!-- start container -->
+            <div
+              class="grid grid-cols-2 items-center justify-between lg:grid-cols-5"
+            >
+              <div class="flex items-center gap-x-2">
+                <span>Show</span>
+                <select name="" id="" class="p-2 rounded-md bg-white">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+
+              <!-- start export button -->
+              <div class="flex items-center gap-x-3 order-3 my-2 lg:order-2">
+                <button class="flex">
+                  <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
+                </button>
+                <button class="flex">
+                  <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
+                </button>
+              </div>
+              <!-- end export button -->
+
+              <button
+                data-modal="modal-tambah"
+                class="modal-button py-2 px-4 bg-blue-500 text-white order-4 rounded-md hover:bg-blue-600 flex items-center gap-x-2 justify-center"
+              >
+                <img
+                  src="assets/icon/add.svg"
+                  class="w-5 pointer-events-none"
+                  alt=""
+                />
+                <span class="pointer-events-none">Tambah Bidang</span>
+              </button>
+
+              <!-- start serach bar -->
+              <form class="w-full lg:order-3 lg:col-span-2">
+                <div class="flex">
+                  <div class="relative w-full lg:w-[80%]">
+                    <input type="search" id=location-search" class="block p-2.5
+                    w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-md
+                    border-l-gray-50 border-l-2 border border-gray-300
+                    focus:ring-blue-500 focus:border-blue-500" required>
+                    <button
+                      type="submit"
+                      class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-emerald-400 rounded-r-md border border-emerald-400 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-emerald-300"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
+                      </svg>
+                      <span class="sr-only">Search</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <!-- end serach bar -->
+            </div>
+            <!-- end container -->
+          </div>
+
+          <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                <table
+                  class="min-w-full text-left text-sm font-light bg-slate-50 rounded-md"
+                >
+                  <thead class="border-b font-medium dark:border-neutral-500">
+                    <tr>
+                      <th scope="col" class="px-4 py-4">No</th>
+                      <th scope="col" class="px-4 py-4">Kode Bidang</th>
+                      <th scope="col" class="px-4 py-4">Bidang</th>
+                      <th scope="col" class="px-6 py-4">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">1</td>
+                      <td class="whitespace-normal px-4 py-4">001</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        Pembendaharaan
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">2</td>
+                      <td class="whitespace-normal px-4 py-4">002</td>
+                      <td class="whitespace-normal px-4 py-4">Anggaran</td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">3</td>
+                      <td class="whitespace-normal px-4 py-4">003</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        Pendataan Dan Penetapan
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">4</td>
+                      <td class="whitespace-normal px-4 py-4">004</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        Penagihan dan Pengawasan
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end tabel -->
+          <!-- start pagination -->
+          <nav aria-label="Page navigation example flex w-full justify-center">
+            <ul class="inline-flex -space-x-px mt-3 w-full">
+              <li>
+                <a
+                  href="#"
+                  class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-slate-200 border border-gray-300 rounded-l-lg"
+                  >Previous</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-3 py-2 leading-tight dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700"
+                  >1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-3 py-2 leading-tight text-gray-500 bg-slate-200 border border-gray-300 rounded-r-lg"
+                  >Next</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- end pagination -->
+        </section>
+        <!-- end section pengajuan surat keluar -->
+
+        <div
+          class="overlay w-screen h-screen absolute top-0 bg-slate-900 opacity-70 left-0 z-10 hidden"
+        ></div>
+
+        <!-- start modal tambah -->
+        <div
+          id="modal-tambah"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modal-container hidden fixed top-0 left-0 z-50 w-full h-screen p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full bg-black bg-opacity-50"
+        >
+          <div class="relative w-full max-w-2xl max-h-full top-0 left-0 m-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <!-- Modal header -->
+              <div
+                class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Tambah Bidang
+                </h3>
+                <button
+                  type="button"
+                  class="modal-close w-8 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-full pointer-events-none"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-6 space-y-3">
+                <div class="cols flex items-center justify-between gap-x-4">
+                  <span class="w-[20%] text-slate-600">Kode Bidang</span>
+                  <input
+                    type="text"
+                    value=""
+                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+
+                <div class="cols flex items-center justify-between gap-x-4">
+                  <span class="w-[20%] text-slate-600">Bidang</span>
+                  <input
+                    type="text"
+                    value=""
+                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              </div>
+              <!-- end modal body -->
+              <!-- start modal footer -->
+              <div
+                class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+              >
+                <button
+                  type="button"
+                  class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  SIMPAN
+                </button>
+              </div>
+              <!-- end modal footer -->
+            </div>
+          </div>
+        </div>
+        <!-- end modal tambah -->
+
+        <!-- start modal edit -->
+        <div
+          id="modal-edit"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modal-container hidden fixed top-0 left-0 z-50 w-full h-screen p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full bg-black bg-opacity-50"
+        >
+          <div class="relative w-full max-w-2xl max-h-full top-0 left-0 m-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <!-- Modal header -->
+              <div
+                class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Edit Bidang
+                </h3>
+                <button
+                  type="button"
+                  class="modal-close w-8 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-full pointer-events-none"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-6 space-y-3">
+                <div class="cols flex items-center justify-between gap-x-4">
+                  <span class="w-[20%] text-slate-600">Kode Bidang</span>
+                  <input
+                    type="text"
+                    value="001"
+                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+
+                <div class="cols flex items-center justify-between gap-x-4">
+                  <span class="w-[20%] text-slate-600">Bidang</span>
+                  <input
+                    type="text"
+                    value="Pembendaharaan"
+                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              </div>
+
+              <!-- end modal body -->
+              <!-- start modal footer -->
+              <div
+                class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+              >
+                <button
+                  type="button"
+                  class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  UBAH
+                </button>
+              </div>
+              <!-- end modal footer -->
+            </div>
+          </div>
+        </div>
+        <!-- end modal edit -->
+
+        <!-- start modal hapus -->
+        <div
+          id="modal-hapus"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modal-container hidden fixed top-0 left-0 z-50 w-full h-screen p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full bg-black bg-opacity-50"
+        >
+          <div
+            class="relative w-full max-w-2xl max-h-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+          >
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <!-- Modal header -->
+              <div
+                class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Hapus Bidang
+                </h3>
+                <button
+                  type="button"
+                  class="modal-close w-8 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-full pointer-events-none"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-6 space-y-3">
+                <h4 class="text-base">Anda Yakin Untuk Menghapus Data Ini?</h4>
+
+                <button
+                  data-modal-hide="defaultModal"
+                  type="button"
+                  class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2"
+                >
+                  HAPUS
+                </button>
+                <button
+                  data-modal-hide="defaultModal"
+                  type="button"
+                  class="modal-close text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
+                >
+                  BATAL
+                </button>
+              </div>
+              <!-- end modal body -->
+            </div>
+          </div>
+        </div>
+        <!-- end modal hapus -->
+      </main>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
