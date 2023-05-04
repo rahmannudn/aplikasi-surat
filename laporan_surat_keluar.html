@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <title>Halaman Laporan Surat Keluar</title>
+    <!-- Load Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-200 text-robotto max-w-[100vw] overflow-x-hidden">
+    <header class="top-header w-full bg-blue-500 flex items-center gap-x-4">
+      <!-- start header logo -->
+      <div
+        class="logo-header hidden w-[24%] h-15 md:flex md:items-center px-3 py-1 gap-x-2"
+      >
+        <img
+          class="w-12"
+          alt=""
+          src="assets/img/LOGO_KOTA_BANJARMASIN_-_328_KB-removebg-preview.png"
+        />
+        <h3 class="text-base font-semibold text-white uppercase">
+          Aplikasi <br />
+          Pengelolaan Surat
+        </h3>
+      </div>
+      <!-- end header logo -->
+      <!-- start hamburger menu -->
+      <div
+        class="h-[74.56px] z-20 flex items-center justify-between w-full px-3 md:z-0"
+      >
+        <img
+          src="assets/icon/menu-icon.svg"
+          class="w-5 cursor-pointer hamburger-menu visible md:invisible"
+          alt=""
+        />
+
+        <button
+          class="btn-account text-white font-semibold flex items-center gap-x-[1px] relative z-50"
+        >
+          <span>Account</span
+          ><img
+            src="assets/icon/angle-small-down.svg"
+            class="w-4 inline-block"
+            alt=""
+          />
+
+          <ul
+            class="account-list hidden w-44 absolute top-7 -left-[6rem] bg-white rounded-md p-3 pb-6 text-left z-50 shadow-xl"
+          >
+            <li
+              class="p-2 border-b border-b-slate-400 text-slate-700 font-normal text-sm flex items-center justify-between hover:text-slate-900 hover:bg-slate-100 rounded-md"
+            >
+              Account Setting
+              <img src="assets/icon/settings-sliders.svg" class="w-4" alt="" />
+            </li>
+            <li
+              class="p-2 border-b border-b-slate-400 text-slate-700 font-normal text-sm flex items-center justify-between hover:text-slate-900 hover:bg-slate-100 rounded-md"
+            >
+              Logout
+              <img src="assets/icon/sign-out-alt.svg" class="w-4" alt="" />
+            </li>
+          </ul>
+        </button>
+      </div>
+
+      <!-- end hamburger menu -->
+    </header>
+    <div class="flex gap-x-4 w-full">
+      <aside
+        class="sidebar bg-white hidden max-w-[40%] z-20 fixed h-full md:static md:max-w-[30%] md:block md:min-h-screen md:h-auto md:z-0"
+      >
+        <!-- start navbar -->
+        <nav class="p-2">
+          <!-- start profile -->
+          <div class="flex items-center gap-x-3 py-5 px-3">
+            <img class="w-14" src="./assets/icon/picture.svg" alt="" />
+            <div>
+              <h3 class="name text-lg font-semibold break-all">Rahmanuddin</h3>
+              <h4 class="role text-base underline uppercase">Admin</h4>
+              <p class="email text-gray-700 max-w-xs break-all">
+                rahmann@gmail.com
+              </p>
+            </div>
+          </div>
+          <!-- end profile -->
+          <!-- start list menu -->
+          <ul class="px-3 flex flex-col gap-y-2">
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/home.svg" alt="" />
+              <a class="w-full h-full" href="index.html">Dashboard</a>
+            </li>
+            <li
+              class="p-2 w-full flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md text-slate-600"
+            >
+              <img class="w-4" src="assets/icon/envelope (1).svg" alt="" />
+              <a class="w-full h-full" href="surat_masuk.html">Surat Masuk</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/envelope-bulk.svg" alt="" />
+              <a class="w-full h-full" href="disposisi.html">Disposisi</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/envelope-open.svg" alt="" />
+              <a class="w-full h-full" href="surat_keluar.html">Surat Keluar</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/list.svg" alt="" />
+              <a class="w-full h-full" href="jenis_surat.html">Jenis Surat</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/users-alt.svg" alt="" />
+              <a class="w-full h-full" href="pegawai.html">Pegawai</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img class="w-4" src="assets/icon/elevator.svg" alt="" />
+              <a class="w-full h-full" href="bidang.html">Bidang</a>
+            </li>
+            <li
+              class="p-2 w-full text-slate-600 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img
+                class="w-4"
+                src="assets/icon/envelope-open-dollar.svg"
+                alt=""
+              />
+              <a class="w-full h-full" href="laporan_surat_masuk.html"
+                >Laporan Surat Masuk</a
+              >
+            </li>
+            <li
+              class="p-2 w-full bg-slate-200 text-slate-900 flex items-center gap-x-2 hover:text-slate-900 hover:bg-slate-200 transition ease-in duration-150 cursor-pointer rounded-md"
+            >
+              <img
+                class="w-4"
+                src="assets/icon/envelope-open-text.svg"
+                alt=""
+              />
+              <a class="w-full h-full" href="laporan_surat_keluar.html"
+                >Laporan Surat Keluar</a
+              >
+            </li>
+          </ul>
+          <!-- end list menu -->
+        </nav>
+        <!-- end navbar -->
+      </aside>
+      <main class="p-4 px-2 w-full md:max-w-[78%]">
+        <!-- start section pengajuan surat keluar -->
+        <section class="pengajuan-surat-keluar mt-6">
+          <h2 class="text-xl font-semibold text-slate-950">
+            Laporan Surat Keluar
+          </h2>
+
+          <div class="mt-4">
+            <!-- start grid -->
+            <div
+              class="grid grid-cols-1 justify-center gap-y-4 md:grid-cols-2 md:gap-x-4"
+            >
+              <div class="w-full flex items-center justify-between">
+                <span class="">Masukkan Tanggal Awal</span>
+                <input
+                  type="date"
+                  name=""
+                  id=""
+                  class="py-1 px-2 w-[60%] self-end text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              <div class="w-full flex items-center justify-between">
+                <span class="">Masukkan Tanggal Akhir</span>
+                <input
+                  name=""
+                  type="date"
+                  id=""
+                  class="py-1 px-2 w-[60%] self-end text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              <div class="w-full flex items-center justify-between">
+                <span class="">Jenis Surat</span>
+                <select
+                  class="py-1 px-2 w-[60%] self-end text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="Surat Keterangan">Surat Keterangan</option>
+                  <option value="Surat Tugas">Surat Tugas</option>
+                  <option value="Surat Pengankatan">Surat Pengankatan</option>
+                </select>
+              </div>
+
+              <button
+                class="btn-cari-laporan py-2 px-4 bg-blue-500 text-white order-4 rounded-md hover:bg-blue-600 flex items-center gap-x-2 justify-center"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <span class="pointer-events-none font-semibold">Cari</span>
+              </button>
+            </div>
+            <!-- end grid -->
+
+            <!-- start container -->
+            <div
+              class="mt-4 head-container grid grid-cols-2 items-center justify-between lg:grid-cols-5"
+            >
+              <div class="flex items-center gap-x-2">
+                <span>Show</span>
+                <select name="" id="" class="p-2 rounded-md bg-white">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+
+              <!-- start export button -->
+              <div class="flex items-center gap-x-3 order-3 my-2 lg:order-2">
+                <button class="flex">
+                  <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
+                </button>
+                <button class="flex">
+                  <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
+                </button>
+              </div>
+              <!-- end export button -->
+            </div>
+          </div>
+          <!-- end container -->
+
+          <div class="mt-4 table-container flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                <table
+                  class="min-w-full text-left text-sm font-light bg-slate-50 rounded-md"
+                >
+                  <thead class="border-b font-medium dark:border-neutral-500">
+                    <tr>
+                      <th scope="col" class="px-4 py-4">No</th>
+                      <th scope="col" class="px-4 py-4">No Surat</th>
+                      <th scope="col" class="px-4 py-4">Tujuan</th>
+                      <th scope="col" class="px-4 py-4">Isi</th>
+                      <th scope="col" class="px-4 py-4">Tanggal Surat</th>
+                      <th scope="col" class="px-4 py-4">Keteragan</th>
+                      <th scope="col" class="px-4 py-4">Jenis Surat</th>
+                      <th scope="col" class="px-4 py-4">File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">1</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        800/172/BKD-BJM/2023
+                      </td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        BKN
+                      </td>
+                      <td class="whitespace-normal px-4 py-4">
+                        Mengikuti Acara Halal Bil Halal untuk menjalin tali
+                        silaturahmi
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">2/2/2023</td>
+                      <td class="whitespace-nowrap px-4 py-4">-</td>
+                      <td class="whitespace-nowrap px-4 py-4">
+                        Surat Undangan
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-4 py-4 text-blue-600 underline cursor-pointer"
+                      >
+                        Lihat File
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end tabel -->
+          <!-- start pagination -->
+          <nav
+            aria-label="Page navigation example flex w-full justify-center"
+            class="mt-4 pagination-container"
+          >
+            <ul class="inline-flex -space-x-px mt-3 w-full">
+              <li>
+                <a
+                  href="#"
+                  class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-slate-200 border border-gray-300 rounded-l-lg"
+                  >Previous</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-3 py-2 leading-tight dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700"
+                  >1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="px-3 py-2 leading-tight text-gray-500 bg-slate-200 border border-gray-300 rounded-r-lg"
+                  >Next</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- end pagination -->
+        </section>
+        <!-- end section pengajuan surat keluar -->
+
+        <div
+          class="overlay w-screen h-screen absolute top-0 bg-slate-900 opacity-70 left-0 z-10 hidden"
+        ></div>
+      </main>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
