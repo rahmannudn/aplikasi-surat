@@ -192,7 +192,7 @@
                 <button class="flex">
                   <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
                 </button>
-                <button class="flex">
+                <button class="flex btn-report-surat-masuk">
                   <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
                 </button>
               </div>
@@ -263,7 +263,7 @@
                       <th scope="col" class="px-6 py-4">Action</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="table-data">
                     <tr class="border-b dark:border-neutral-500">
                       <td class="whitespace-nowrap px-4 py-4 font-medium">1</td>
                       <td class="whitespace-normal px-4 py-4">
@@ -276,6 +276,123 @@
                       </td>
                       <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
                         BKN
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-detail"
+                          class="modal-button bg-green-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-green-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/square-info.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Detail</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">2</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        122.2/170/Pemda-BJM/2023
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">5/2/2023</td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        Rapat Evaluasi Kerja
+                      </td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        Pemerintah Kota Banjarmasin
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-detail"
+                          class="modal-button bg-green-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-green-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/square-info.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Detail</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">3</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        800/170/Dinkes-BJM/2023
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">10/2/2023</td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        Sosialisasi mengenai bahaya penyakit menular di
+                        lingkungan
+                      </td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        Dinas Kesehatan
                       </td>
                       <td
                         class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
@@ -639,7 +756,7 @@
                   <span class="w-[20%] text-slate-600">No Surat</span>
                   <input
                     type="text"
-                    value=""
+                    value="800/172/BKD-BJM/2023"
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -648,7 +765,7 @@
                   <span class="w-[20%] text-slate-600">Pengirim</span>
                   <input
                     type="text"
-                    value=""
+                    value="BKN"
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -658,6 +775,7 @@
                   <textarea
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   >
+Mengikuti Acara Halal Bil Halal untuk menjalin tali silaturahmi	
                   </textarea>
                 </div>
 
@@ -665,7 +783,7 @@
                   <span class="w-[20%] text-slate-600">Tgl Surat</span>
                   <input
                     type="date"
-                    value=""
+                    value="2/2/2023"
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -674,7 +792,7 @@
                   <span class="w-[20%] text-slate-600">Tgl Diterima</span>
                   <input
                     type="date"
-                    value=""
+                    value="2/2/2023"
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -796,6 +914,8 @@
       </main>
     </div>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/report.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./assets/css/output.css" />
-    <title>Halaman Dashboard</title>
+    <title>Halaman Disposisi</title>
     <!-- Load Tailwind CSS -->
     <link rel="stylesheet" href="assets/css/output.css" />
     <!-- fonts -->
@@ -191,7 +191,11 @@
                   <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
                 </button>
                 <button class="flex">
-                  <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
+                  <img
+                    class="w-8 btn-report-disposisi"
+                    src="assets/icon/file-pdf.svg"
+                    alt=""
+                  />
                 </button>
               </div>
               <!-- end export button -->
@@ -245,6 +249,7 @@
             <!-- end container -->
           </div>
 
+          <!-- start tabel -->
           <div class="flex flex-col">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
@@ -261,15 +266,138 @@
                       <th scope="col" class="px-6 py-4">Action</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="table-data">
                     <tr class="border-b dark:border-neutral-500">
                       <td class="whitespace-nowrap px-4 py-4 font-medium">1</td>
                       <td class="whitespace-normal px-4 py-4">
-                        800/168/UPT-I/2022
+                        800/172/BKD-BJM/2023
                       </td>
-                      <td class="whitespace-nowrap px-4 py-4">25/01/2022</td>
+                      <td class="whitespace-nowrap px-4 py-4">2/2/2023</td>
                       <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
-                        Mengikuti Rapat Evaluasi Di BKN
+                        Mengikuti Acara Halal Mengikuti Acara Halal Bil Halal
+                        untuk menjalin tali silaturahmi
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">
+                        <span
+                          class="p-2 bg-red-500 font-bold rounded-md text-white"
+                          >Penting</span
+                        >
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-detail"
+                          class="modal-button bg-green-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-green-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/square-info.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Detail</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">2</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        122.2/170/Pemda-BJM/2023
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">5/2/2023</td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        Rapat Evaluasi Kerja
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">
+                        <span
+                          class="p-2 bg-red-500 font-bold rounded-md text-white"
+                          >Penting</span
+                        >
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-detail"
+                          class="modal-button bg-green-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-green-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/square-info.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Detail</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">3</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        800/170/Dinkes-BJM/2023
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">10/2/2023</td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        Sosialisasi bahaya penyakit
                       </td>
                       <td class="whitespace-nowrap px-4 py-4">
                         <span
@@ -423,7 +551,7 @@
                 </div>
 
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Isi Surat</span>
+                  <span class="w-[20%] text-slate-600">Isi Disposisi</span>
                   <textarea
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     readonly
@@ -550,33 +678,78 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
               </div>
               <!-- Modal body -->
               <div class="p-6 space-y-3">
-                <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">No Surat</span>
-                  <select name="" id="">
-                    <input type="text" placeholder="search" />
-                  </select>
-                  <select
-                    value=""
-                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                <!-- search bar start -->
+                <div class="relative inline-block text-left w-full">
+                  <div class="cols flex items-center justify-between gap-x-4">
+                    <span class="w-[30%] md:w-[20%] text-slate-600"
+                      >Pilih Surat</span
+                    >
+                    <button
+                      type="button"
+                      class="btn-cari-surat w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      id="options-menu"
+                      aria-haspopup="true"
+                      aria-expanded="true"
+                    >
+                      <div class="w-full h-full inline-flex justify-between">
+                        <span class="pr-2">Select an option</span>
+                        <svg
+                          class="w-5 h-5 -mr-1"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <ul
+                    class="hidden modal list-surat origin-top-right absolute left-28 mt-2 w-[70%] rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
                   >
-                    <option value="800/168/UPT-I/2022">
-                      800/168/UPT-I/2022
-                    </option>
-                  </select>
+                    <li class="p-2">
+                      <label for="search" class="sr-only">Search</label>
+                      <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        class="p-2 shadow-sm text-slate-500 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                        placeholder="Search..."
+                      />
+                    </li>
+                    <li
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      800/172/BKD-BJM/2023 - Mengikuti Acara Halal Bil Halal ...
+                    </li>
+                  </ul>
                 </div>
+                <!-- search bar end -->
 
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Pengirim</span>
+                  <span class="w-[30%] md:w-[20%] text-slate-600"
+                    >Asal Surat</span
+                  >
                   <input
                     type="text"
-                    value=""
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     readonly
                   />
                 </div>
 
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Isi Surat</span>
+                  <span class="w-[30%] md:w-[20%] text-slate-600"
+                    >Isi Disposisi</span
+                  >
                   <textarea
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   >
@@ -584,7 +757,9 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                 </div>
 
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Tgl Surat</span>
+                  <span class="w-[30%] md:w-[20%] text-slate-600"
+                    >Tgl Disposisi</span
+                  >
                   <input
                     type="date"
                     value=""
@@ -593,33 +768,39 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                 </div>
 
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Tgl Diterima</span>
-                  <input
-                    type="date"
-                    value=""
-                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                </div>
-
-                <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">File</span>
-                  <input
-                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                    type="file"
-                    name=""
-                    id=""
-                  />
-                </div>
-
-                <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Jenis Surat</span>
+                  <span class="w-[30%] md:w-[20%] text-slate-600"
+                    >Sifat Disposisi</span
+                  >
                   <select
+                    type="text"
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   >
-                    <option value="Surat Keterangan">Surat Keterangan</option>
-                    <option value="Surat Tugas">Surat Tugas</option>
-                    <option value="Surat Pengankatan">Surat Pengankatan</option>
+                    <option value="">Penting</option>
+                    <option value="">Rahasia</option>
+                    <option value="">Sangat Rahasia</option>
                   </select>
+                </div>
+
+                <div class="cols flex items-center justify-between gap-x-4">
+                  <span class="w-[30%] md:w-[20%] text-slate-600"
+                    >Keterangan</span
+                  >
+                  <input
+                    type="text"
+                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+
+                <div class="cols flex items-center">
+                  <span class="w-[30%] md:w-[20%] text-slate-600">File</span>
+                  <div class="flex items-center">
+                    <img
+                      src="assets/icon/file-pdf.svg"
+                      class="w-8 cursor-pointer"
+                      alt=""
+                    />
+                    <span>contoh_disposisi.pdf</span>
+                  </div>
                 </div>
               </div>
               <!-- end modal body -->
@@ -627,6 +808,140 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
               <div
                 class="p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
               >
+                <div class="cols flex items-center justify-between gap-x-4">
+                  <span class="w-[20%] text-slate-600">Disposisi Kepada</span>
+                  <button
+                    data-modal="modal-pegawai-tambah"
+                    type="button"
+                    class="btn-tambah-pegawai text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                  >
+                    Tambah Pegawai
+                  </button>
+                </div>
+
+                <!-- start tabel riwayat -->
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                    <table
+                      class="min-w-full text-left text-sm font-light bg-slate-50 rounded-md"
+                    >
+                      <thead
+                        class="border-b font-medium dark:border-neutral-500"
+                      >
+                        <tr>
+                          <th scope="col" class="px-4 py-4">No</th>
+                          <th scope="col" class="px-4 py-4">Nama Pegawai</th>
+                          <th scope="col" class="px-4 py-4">Bidang</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-content-tambah">
+                        <ul
+                          class="hidden modal list-surat-tambah origin-top-right absolute left-28 mt-2 w-[70%] rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                          role="menu"
+                          aria-orientation="vertical"
+                          aria-labelledby="options-menu"
+                        >
+                          <li class="p-2">
+                            <label for="search" class="sr-only">Search</label>
+                            <input
+                              type="text"
+                              name="search"
+                              id="search"
+                              class="p-2 shadow-sm text-slate-500 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                              placeholder="Search..."
+                            />
+                          </li>
+                          <li
+                            href="#"
+                            class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            800/172/BKD-BJM/2023 - Mengikuti Acara Halal Bil
+                            Halal ...
+                          </li>
+                        </ul>
+
+                        <tr
+                          class="relative pilih-pegawai border-b dark:border-neutral-500"
+                        >
+                          <td
+                            class="whitespace-nowrap px-4 py-4 font-medium"
+                          ></td>
+                          <td
+                            class="whitespace-normal px-4 py-4 cursor-pointer no-underline"
+                          >
+                            <button
+                              type="button"
+                              id="modal-pegawai-tambah"
+                              data-modal="dropdown-pegawai-tambah"
+                              class="hidden btn-tambah-disposisi-pegawai w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                              id="options-menu"
+                              aria-haspopup="true"
+                              aria-expanded="true"
+                            >
+                              <div
+                                class="w-full h-full inline-flex justify-between pointer-events-none"
+                              >
+                                <span class="pr-2 pointer-events-none"
+                                  >Pilih Pegawai</span
+                                >
+                                <svg
+                                  class="w-5 h-5 -mr-1 pointer-events-none"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    class="pointer-events-none"
+                                    fill-rule="evenodd"
+                                    d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </div>
+                            </button>
+                            <ul
+                              id="dropdown-pegawai-tambah"
+                              class="modal hidden list-pegawai-tambah origin-top-right left-28 mt-2 w-full rounded-md shadow-2xl bg-white ring-1 no-underline ring-black ring-opacity-5 focus:outline-none"
+                              role="menu"
+                              aria-orientation="vertical"
+                              aria-labelledby="options-menu"
+                            >
+                              <li class="p-2">
+                                <label for="search" class="sr-only"
+                                  >Search</label
+                                >
+                                <input
+                                  type="text"
+                                  name="search"
+                                  id="search"
+                                  class="p-2 shadow-sm text-slate-500 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                  placeholder="Search..."
+                                />
+                              </li>
+                              <li
+                                href="#"
+                                class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem"
+                              >
+                                <span class="font-bold">Rizky Munawar</span> -
+                                Kepegawaian
+                              </li>
+                              <li
+                                href="#"
+                                class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem"
+                              >
+                                <span class="font-bold">Reza</span> - Umum
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- end tabel riwayat -->
                 <button
                   type="button"
                   class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -683,8 +998,9 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                   <span class="w-[20%] text-slate-600">No Surat</span>
                   <input
                     type="text"
-                    value=""
+                    value="800/172/BKD-BJM/2023"
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    readonly
                   />
                 </div>
 
@@ -692,21 +1008,24 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                   <span class="w-[20%] text-slate-600">Pengirim</span>
                   <input
                     type="text"
-                    value=""
+                    value="BKN"
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    readonly
                   />
                 </div>
 
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Isi Surat</span>
+                  <span class="w-[20%] text-slate-600">Isi Disposisi</span>
                   <textarea
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   >
+Mengikuti Acara Halal Bil Halal untuk menjalin tali
+                  silaturahmi
                   </textarea>
                 </div>
 
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Tgl Surat</span>
+                  <span class="w-[20%] text-slate-600">Tgl Disposisi</span>
                   <input
                     type="date"
                     value=""
@@ -714,10 +1033,25 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                   />
                 </div>
 
+                <!-- sifat disposisi -->
                 <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Tgl Diterima</span>
+                  <span class="w-[30%] md:w-[20%] text-slate-600"
+                    >Sifat Disposisi</span
+                  >
+                  <select
+                    type="text"
+                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="">Penting</option>
+                    <option value="">Rahasia</option>
+                    <option value="">Sangat Rahasia</option>
+                  </select>
+                </div>
+
+                <div class="cols flex items-center justify-between gap-x-4">
+                  <span class="w-[20%] text-slate-600">Keterangan</span>
                   <input
-                    type="date"
+                    type="text"
                     value=""
                     class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                   />
@@ -744,17 +1078,6 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                     id=""
                   />
                 </div>
-
-                <div class="cols flex items-center justify-between gap-x-4">
-                  <span class="w-[20%] text-slate-600">Jenis Surat</span>
-                  <select
-                    class="w-full py-1 px-2 text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option value="Surat Keterangan">Surat Keterangan</option>
-                    <option value="Surat Tugas">Surat Tugas</option>
-                    <option value="Surat Pengankatan">Surat Pengankatan</option>
-                  </select>
-                </div>
               </div>
               <!-- end modal body -->
               <!-- start modal footer -->
@@ -765,7 +1088,8 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                   <span class="w-[20%] text-slate-600">Riwayat</span>
                   <button
                     type="button"
-                    class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    data-modal="modal-pegawai-edit"
+                    class="btn-tambah-pegawai text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                   >
                     Tambah Pegawai
                   </button>
@@ -786,7 +1110,7 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                           <th scope="col" class="px-4 py-4">Bidang</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody class="table-content">
                         <tr class="border-b dark:border-neutral-500">
                           <td class="whitespace-nowrap px-4 py-4 font-medium">
                             1
@@ -794,6 +1118,84 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
                           <td class="whitespace-normal px-4 py-4">Reza</td>
                           <td class="whitespace-nowrap px-4 py-4">Umum</td>
                         </tr>
+                        <!-- pilih pegawai start -->
+                        <tr
+                          class="relative pilih-pegawai border-b dark:border-neutral-500"
+                        >
+                          <td
+                            class="whitespace-nowrap px-4 py-4 font-medium"
+                          ></td>
+                          <td
+                            class="whitespace-normal px-4 py-4 cursor-pointer no-underline"
+                          >
+                            <button
+                              type="button"
+                              id="modal-pegawai-edit"
+                              data-modal="dropdown-pegawai-edit"
+                              class="hidden btn-tambah-disposisi-pegawai w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                              id="options-menu"
+                              aria-haspopup="true"
+                              aria-expanded="true"
+                            >
+                              <div
+                                class="w-full h-full inline-flex justify-between pointer-events-none"
+                              >
+                                <span class="pr-2 pointer-events-none"
+                                  >Pilih Pegawai</span
+                                >
+                                <svg
+                                  class="w-5 h-5 -mr-1 pointer-events-none"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    class="pointer-events-none"
+                                    fill-rule="evenodd"
+                                    d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </div>
+                            </button>
+                            <ul
+                              id="dropdown-pegawai-edit"
+                              class="modal hidden list-pegawai-tambah origin-top-right left-28 mt-2 w-full rounded-md shadow-2xl bg-white ring-1 no-underline ring-black ring-opacity-5 focus:outline-none"
+                              role="menu"
+                              aria-orientation="vertical"
+                              aria-labelledby="options-menu"
+                            >
+                              <li class="p-2">
+                                <label for="search" class="sr-only"
+                                  >Search</label
+                                >
+                                <input
+                                  type="text"
+                                  name="search"
+                                  id="search"
+                                  class="p-2 shadow-sm text-slate-500 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                  placeholder="Search..."
+                                />
+                              </li>
+                              <li
+                                href="#"
+                                class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem"
+                              >
+                                <span class="font-bold">Rizky Munawar</span> -
+                                Kepegawaian
+                              </li>
+                              <li
+                                href="#"
+                                class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
+                                role="menuitem"
+                              >
+                                <span class="font-bold">Reza</span> - Umum
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <!-- pilih pegawai end -->
                       </tbody>
                     </table>
                   </div>
@@ -879,6 +1281,8 @@ Mengikuti Evaluasi Kerja Tahunan</textarea
       </main>
     </div>
 
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/report.js"></script>
   </body>
 </html>

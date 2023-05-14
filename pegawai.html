@@ -191,7 +191,11 @@
                   <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
                 </button>
                 <button class="flex">
-                  <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
+                  <img
+                    class="w-8 btn-report-pegawai"
+                    src="assets/icon/file-pdf.svg"
+                    alt=""
+                  />
                 </button>
               </div>
               <!-- end export button -->
@@ -321,6 +325,60 @@
                       <td class="whitespace-normal px-4 py-4">Admin</td>
                       <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
                         rahmann@gmail.com
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-detail"
+                          class="modal-button bg-green-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-green-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/square-info.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Detail</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">3</td>
+                      <td class="whitespace-normal px-4 py-4">Reza</td>
+                      <td class="whitespace-normal px-4 py-4">Karyawan</td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        rezaaa@gmail.com
                       </td>
                       <td
                         class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
@@ -828,6 +886,8 @@
       </main>
     </div>
 
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/report.js"></script>
   </body>
 </html>
