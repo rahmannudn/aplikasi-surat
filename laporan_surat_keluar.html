@@ -76,7 +76,8 @@
     </header>
     <div class="flex gap-x-4 w-full">
       <aside
-        class="sidebar bg-white hidden max-w-[40%] z-20 fixed h-full md:static md:max-w-[30%] md:block md:min-h-screen md:h-auto md:z-0"
+        class="sidebar min-h-screen h-auto bg-white hidden max-w-[70%] z-20 fixed md:static md:max-w-[30%] md:block md:h-screen md:z-0"
+        style="height: auto"
       >
         <!-- start navbar -->
         <nav class="p-2">
@@ -249,7 +250,11 @@
                   <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
                 </button>
                 <button class="flex">
-                  <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
+                  <img
+                    class="w-8 btn-report-surat-keluar"
+                    src="assets/icon/file-pdf.svg"
+                    alt=""
+                  />
                 </button>
               </div>
               <!-- end export button -->
@@ -279,20 +284,86 @@
                     <tr class="border-b dark:border-neutral-500">
                       <td class="whitespace-nowrap px-4 py-4 font-medium">1</td>
                       <td class="whitespace-normal px-4 py-4">
-                        800/172/BKD-BJM/2023
+                        800/152/BKD-BJM/2023
                       </td>
                       <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
-                        BKN
+                        ULM
                       </td>
                       <td class="whitespace-normal px-4 py-4">
-                        Mengikuti Acara Halal Bil Halal untuk menjalin tali
-                        silaturahmi
+                        Menyatakan siap menerima mahasiswa magang
                       </td>
                       <td class="whitespace-nowrap px-4 py-4">2/2/2023</td>
                       <td class="whitespace-nowrap px-4 py-4">-</td>
                       <td class="whitespace-nowrap px-4 py-4">
-                        Surat Undangan
+                        Surat Keterangan
                       </td>
+                      <td
+                        class="whitespace-nowrap px-4 py-4 text-blue-600 underline cursor-pointer"
+                      >
+                        Lihat File
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">2</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        800/155/BKD-BJM/2023
+                      </td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        ULM
+                      </td>
+                      <td class="whitespace-normal px-4 py-4">
+                        Menyatakan mahasiswa bernama ujang melakukan penelitian
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">10/3/2023</td>
+                      <td class="whitespace-nowrap px-4 py-4">-</td>
+                      <td class="whitespace-nowrap px-4 py-4">
+                        Surat Keterangan
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-4 py-4 text-blue-600 underline cursor-pointer"
+                      >
+                        Lihat File
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">3</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        800/156/BKD-BJM/2023
+                      </td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        Seluruh Sekolah SD & SMP sekota
+                      </td>
+                      <td class="whitespace-normal px-4 py-4">
+                        rapat sosialisasi aset
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">20/3/2023</td>
+                      <td class="whitespace-nowrap px-4 py-4">-</td>
+                      <td class="whitespace-nowrap px-4 py-4">
+                        Surat Keterangan
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-4 py-4 text-blue-600 underline cursor-pointer"
+                      >
+                        Lihat File
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">4</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        200.2/157/BKD-BJM/2023
+                      </td>
+                      <td class="whitespace-normal px-4 py-4 max-w-[13rem]">
+                        -
+                      </td>
+                      <td class="whitespace-normal px-4 py-4">
+                        Surat tugas pa reza untuk melaksanakan perjalanan dinas
+                      </td>
+                      <td class="whitespace-nowrap px-4 py-4">10/4/2023</td>
+                      <td class="whitespace-nowrap px-4 py-4">-</td>
+                      <td class="whitespace-nowrap px-4 py-4">Surat Tugas</td>
                       <td
                         class="whitespace-nowrap px-4 py-4 text-blue-600 underline cursor-pointer"
                       >
@@ -344,6 +415,8 @@
       </main>
     </div>
 
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/report.js"></script>
   </body>
 </html>

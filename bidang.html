@@ -76,7 +76,8 @@
     </header>
     <div class="flex gap-x-4 w-full">
       <aside
-        class="sidebar bg-white hidden max-w-[40%] z-20 fixed h-full md:static md:max-w-[30%] md:block md:h-screen md:z-0"
+        class="sidebar min-h-screen h-auto bg-white hidden max-w-[70%] z-20 fixed md:static md:max-w-[30%] md:block md:h-screen md:z-0"
+        style="height: auto"
       >
         <!-- start navbar -->
         <nav class="p-2">
@@ -191,7 +192,11 @@
                   <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
                 </button>
                 <button class="flex">
-                  <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
+                  <img
+                    class="w-8 btn-report-bidang"
+                    src="assets/icon/file-pdf.svg"
+                    alt=""
+                  />
                 </button>
               </div>
               <!-- end export button -->
@@ -670,6 +675,8 @@
       </main>
     </div>
 
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/report.js"></script>
   </body>
 </html>

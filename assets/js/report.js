@@ -37,7 +37,7 @@ btnReportSuratMasuk?.addEventListener("click", function () {
   var props = {
     outputType: jsPDFInvoiceTemplate.Save,
     returnJsPDFDocObject: true,
-    fileName: "Laporan Surat Keluar",
+    fileName: "Laporan Surat Masuk",
     orientationLandscape: true,
     compress: true,
     logo: {
@@ -450,6 +450,140 @@ btnReportPegawai?.addEventListener("click", function () {
         item[2],
         item[3],
         item[4],
+      ]),
+    },
+    pageEnable: true,
+    pageLabel: "Page ",
+  };
+
+  var pdfObject = jsPDFInvoiceTemplate.default(props); //returns number of pages created
+});
+
+const dataJenisSurat = [
+  [800, "Surat Keterangan"],
+  [421, "Surat Tugas"],
+  [200, "Surat Peringatan"],
+];
+const btnReportJenisSurat = document.querySelector(".btn-report-jenis-surat");
+btnReportJenisSurat?.addEventListener("click", function () {
+  var props = {
+    outputType: jsPDFInvoiceTemplate.Save,
+    returnJsPDFDocObject: true,
+    fileName: "Laporan Jenis Surat",
+    orientationLandscape: true,
+    compress: true,
+    logo: {
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSME_mTHRD3VM_5SZM6JS9fi8d2EjgIHoqccmOOdi5W&s",
+      type: "PNG", //optional, when src= data:uri (nodejs case)
+      width: 25, //aspect ratio = width/height
+      height: 30,
+      margin: {
+        top: -3, //negative or positive num, from the current position
+        left: 0, //negative or positive num, from the current position
+      },
+    },
+    business: {
+      name: "Badan Keuangan Daerah Banjarmasin",
+      address:
+        "Jl. RE Martadinata No.1, Kertak Baru Ilir, Kec. Banjarmasin Tengah 70001",
+      phone: "(+355) 069 11 11 111",
+      email: "bkd@gmail.com",
+      website: "https://bkd.banjarmasinkota.go.id/",
+    },
+    contact: {
+      name: "Laporan Jenis Surat",
+      address: "Laporan Dari : 01/01/2021",
+      phone: "Sampai : 02/02/2021",
+    },
+    invoice: {
+      headerBorder: true,
+      tableBodyBorder: true,
+      header: [
+        {
+          title: "No",
+          style: {
+            width: 10,
+          },
+        },
+        {
+          title: "Kode Surat",
+        },
+        {
+          title: "Jenis Surat",
+        },
+      ],
+      table: Array.from(dataJenisSurat, (item, index) => [
+        index + 1,
+        item[0],
+        item[1],
+      ]),
+    },
+    pageEnable: true,
+    pageLabel: "Page ",
+  };
+
+  var pdfObject = jsPDFInvoiceTemplate.default(props); //returns number of pages created
+});
+
+const dataBidang = [
+  ["001", "Pembendaharaan"],
+  ["002", "Anggaran"],
+  ["003", "Pendataan Dan Penetapan"],
+  ["004", "Penagihan dan Pengawasan"],
+];
+const btnReportBidang = document.querySelector(".btn-report-bidang");
+console.log(btnReportBidang);
+btnReportBidang?.addEventListener("click", function () {
+  var props = {
+    outputType: jsPDFInvoiceTemplate.Save,
+    returnJsPDFDocObject: true,
+    fileName: "Laporan Bidang",
+    orientationLandscape: true,
+    compress: true,
+    logo: {
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSME_mTHRD3VM_5SZM6JS9fi8d2EjgIHoqccmOOdi5W&s",
+      type: "PNG", //optional, when src= data:uri (nodejs case)
+      width: 25, //aspect ratio = width/height
+      height: 30,
+      margin: {
+        top: -3, //negative or positive num, from the current position
+        left: 0, //negative or positive num, from the current position
+      },
+    },
+    business: {
+      name: "Badan Keuangan Daerah Banjarmasin",
+      address:
+        "Jl. RE Martadinata No.1, Kertak Baru Ilir, Kec. Banjarmasin Tengah 70001",
+      phone: "(+355) 069 11 11 111",
+      email: "bkd@gmail.com",
+      website: "https://bkd.banjarmasinkota.go.id/",
+    },
+    contact: {
+      name: "Laporan Bidang",
+      address: "Laporan Dari : 01/01/2021",
+      phone: "Sampai : 02/02/2021",
+    },
+    invoice: {
+      headerBorder: true,
+      tableBodyBorder: true,
+      header: [
+        {
+          title: "No",
+          style: {
+            width: 10,
+          },
+        },
+        {
+          title: "Kode Bidang",
+        },
+        {
+          title: "Bidang",
+        },
+      ],
+      table: Array.from(dataBidang, (item, index) => [
+        index + 1,
+        item[0],
+        item[1],
       ]),
     },
     pageEnable: true,

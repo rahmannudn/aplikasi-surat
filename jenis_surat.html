@@ -76,7 +76,8 @@
     </header>
     <div class="flex gap-x-4 w-full">
       <aside
-        class="sidebar bg-white hidden max-w-[40%] z-20 fixed h-full md:static md:max-w-[30%] md:block md:h-screen md:z-0"
+        class="sidebar min-h-screen h-auto bg-white hidden max-w-[70%] z-20 fixed md:static md:max-w-[30%] md:block md:h-screen md:z-0"
+        style="height: auto"
       >
         <!-- start navbar -->
         <nav class="p-2">
@@ -193,7 +194,11 @@
                   <img class="w-8" src="assets/icon/file-excel.svg" alt="" />
                 </button>
                 <button class="flex">
-                  <img class="w-8" src="assets/icon/file-pdf.svg" alt="" />
+                  <img
+                    class="w-8 btn-report-jenis-surat"
+                    src="assets/icon/file-pdf.svg"
+                    alt=""
+                  />
                 </button>
               </div>
               <!-- end export button -->
@@ -267,6 +272,82 @@
                       <td class="whitespace-normal px-4 py-4">800</td>
                       <td class="whitespace-normal px-4 py-4">
                         Surat Keterangan
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">2</td>
+                      <td class="whitespace-normal px-4 py-4">421</td>
+                      <td class="whitespace-normal px-4 py-4">Surat Tugas</td>
+                      <td
+                        class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
+                      >
+                        <button
+                          data-modal="modal-edit"
+                          class="modal-button bg-blue-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-blue-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/edit-alt.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Edit</span
+                          >
+                        </button>
+
+                        <button
+                          data-modal="modal-hapus"
+                          class="modal-button bg-red-100 p-2 px-4 rounded-md flex items-center justify-center gap-x-1 hover:bg-red-200"
+                        >
+                          <img
+                            class="w-3 cursor-pointer pointer-events-none"
+                            src="assets/icon/trash.svg"
+                            alt=""
+                          />
+                          <span class="text-sm font-medium pointer-events-none"
+                            >Delete</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b dark:border-neutral-500">
+                      <td class="whitespace-nowrap px-4 py-4 font-medium">3</td>
+                      <td class="whitespace-normal px-4 py-4">200</td>
+                      <td class="whitespace-normal px-4 py-4">
+                        Surat Peringatan
                       </td>
                       <td
                         class="whitespace-nowrap px-6 py-4 flex gap-4 flex-wrap text-center"
@@ -557,6 +638,8 @@
       </main>
     </div>
 
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/report.js"></script>
   </body>
 </html>
